@@ -17,5 +17,7 @@ public class CameraCenter : MonoBehaviour
 
         worldCanvas.transform.position = new Vector3(screenCenter.x, screenCenter.y, 0);
 
+        referenceHeight = Screen.height;
+        referenceWidth = Screen.width;
     }
 }
