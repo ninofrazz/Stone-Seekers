@@ -4,9 +4,9 @@
 
 namespace Mapbox.Unity.Location
 {
+	using UnityEngine;
 	using Mapbox.Unity.Map;
 	using System.Text.RegularExpressions;
-	using UnityEngine;
 
 	/// <summary>
 	/// Singleton factory to allow easy access to various LocationProviders.
