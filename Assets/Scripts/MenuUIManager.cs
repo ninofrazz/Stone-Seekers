@@ -29,7 +29,6 @@ public class MenuUIManager : MonoBehaviour
     [SerializeField]
     public Image displayImage;
 
-    public Image[] dexEntries;
 
     void Start()
     {

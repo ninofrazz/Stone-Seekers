@@ -55,7 +55,7 @@ public class EventUIManager : MonoBehaviour
         // Get the build index of the current scene
         sceneNumber = currentScene.buildIndex;
 
-        EM.eventsDone[sceneNumber - 1] = true;
+        EM.eventsDone[sceneNumber - 2] = true;
 
     }
 
