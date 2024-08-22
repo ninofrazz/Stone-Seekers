@@ -16,11 +16,6 @@ public class EventUIManager : MonoBehaviour
 
     public DroppingSlot slot;
 
-    void Awake()
-    {
-        // Make this object persistent across scene loads
-
-    }
 
     void Start()
     {

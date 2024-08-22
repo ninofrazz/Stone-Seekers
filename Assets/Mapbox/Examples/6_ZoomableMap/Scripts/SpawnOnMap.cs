@@ -1,7 +1,6 @@
 ﻿namespace Mapbox.Examples
 {
     using Mapbox.Unity.Map;
-    using Mapbox.Unity.MeshGeneration.Factories;
     using Mapbox.Unity.Utilities;
     using Mapbox.Utils;
     using System.Collections.Generic;
@@ -9,9 +8,6 @@
 
     public class SpawnOnMap : MonoBehaviour
     {
-
-        public Vector2 eventPos;
-
         [SerializeField]
         AbstractMap _map;
 
@@ -21,18 +17,14 @@
 
         [SerializeField]
         float _spawnScale = 100f;
-        [SerializeField]
-        float heightOffset = 0f;
+
+        public float heightOffset = 0f;
 
         [SerializeField]
         GameObject _markerPrefab;
 
         List<GameObject> _spawnedObjects;
-
         Vector2d[] _locations;
-
-
-        Vector2[] vector2s;
 
         void Start()
         {
@@ -53,14 +45,16 @@
                 // Instantiate the marker prefab
                 var instance = Instantiate(_markerPrefab);
 
-                instance.GetComponent<EventPointer>().eventPos = _locations[i];
+                // Ensure the instance has the EventPointer component
+                var eventPointer = instance.GetComponent<EventPointer>();
+                if (eventPointer != null)
+                {
+                    eventPointer.eventPos = _locations[i];
+                    eventPointer.eventID = i + 1;
+                }
 
-                instance.GetComponent<EventPointer>().eventID = i + 1;
-
-                // Set the instance's local position with the offset
-                instance.transform.localPosition = worldPosition;
-
-                // Set the instance's local scale
+                // Set the instance's position and scale
+                instance.transform.position = worldPosition; // Use world position
                 instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 
                 // Add the instance to the list of spawned objects
@@ -83,7 +77,7 @@
                 worldPosition.y += heightOffset;
 
                 // Update the spawned object's position and scale
-                spawnedObject.transform.localPosition = worldPosition;
+                spawnedObject.transform.position = worldPosition; // Use world position
                 spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
             }
         }

@@ -13,15 +13,21 @@ public class IndexManager : MonoBehaviour
 
     public GameObject index;
     public GameObject indexButton;
+    public GameObject Description;
 
     [SerializeField]
     public Sprite[] dexImages;
 
 
+    public string[] dexTitle;
     public string[] dexText;
 
+
+    public TMP_Text DescriptionTitle;
     public TMP_Text DescriptionText;
     public Image DescriptionImage;
+
+    public Scrollbar scrollbar;
 
     public int receivedID;
 
@@ -31,11 +37,15 @@ public class IndexManager : MonoBehaviour
     void Start()
     {
         EM = GameObject.Find("-EventManager").GetComponent<EventManager>();
+        scrollbar.value = 1;
+        scrollbar.size = 0.4f;
+
     }
 
     public void ReceiveID(int id)
     {
         receivedID = id;
+        DescriptionTitle.text = dexTitle[id];
         DescriptionText.text = dexText[id];
         DescriptionImage.sprite = dexImages[id];
     }
@@ -46,6 +56,11 @@ public class IndexManager : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].interactable = EM.eventsDone[i];
+        }
+
+        if (DescriptionImage != null)
+        {
+            DescriptionImage.preserveAspect = true;
         }
     }
 
@@ -58,6 +73,14 @@ public class IndexManager : MonoBehaviour
     {
         indexButton.SetActive(true);
         index.SetActive(false);
+    }
+    public void OpenDescription()
+    {
+        Description.SetActive(true);
+    }
+    public void CloseDescription()
+    {
+        Description.SetActive(false);
     }
 }
 

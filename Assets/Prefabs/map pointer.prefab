@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6aac02a399241e4e8a75cec3dd6220a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.65
+      value: 20.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6aac02a399241e4e8a75cec3dd6220a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -122,6 +122,11 @@ MonoBehaviour:
   rotationSpeed: 50
   aplitude: 2
   frequency: 0.5
-  eventPose:
+  eventPos:
     x: 0
     y: 0
+  eventID: 0
+  index: {fileID: 0}
+  material:
+  - {fileID: 2100000, guid: 53e2cd1e592a0fa4c807da8835cfedc1, type: 2}
+  - {fileID: 2100000, guid: 619f2bf47752f5e45b362e4e9e3c8094, type: 2}

@@ -29,10 +29,11 @@ public class MenuUIManager : MonoBehaviour
     [SerializeField]
     public Image displayImage;
 
+    public IndexManager IndexManager;
 
     void Start()
     {
-
+        texts = IndexManager.dexTitle;
     }
 
     // Update is called once per frame
@@ -40,6 +41,11 @@ public class MenuUIManager : MonoBehaviour
     {
         displayText.text = texts[currentIndex];
         displayImage.sprite = images[currentIndex];
+
+        if (displayImage != null)
+        {
+            displayImage.preserveAspect = true;
+        }
     }
 
     public void DisplayStartEventPanel(int eventID)
