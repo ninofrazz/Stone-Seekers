@@ -76,7 +76,6 @@ public class EventPointer : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        Debug.Log("clicking");
         if (!cam.isDragging || !cam.isZooming && !index.activeInHierarchy)
         {
             playerLocation = GameObject.Find("Canvas").GetComponent<LocationStatus>();
@@ -89,14 +88,14 @@ public class EventPointer : MonoBehaviour
             if (distance < eventManager.maxDistance)
             {
                 menuUIManager.DisplayStartEventPanel(eventID);
-                GetComponentInChildren<Renderer>().material = material[0];
+                //GetComponentInChildren<Renderer>().material = material[0];
 
             }
             else
             {
                 menuUIManager.DisplayUsetNotInRange();
 
-                GetComponentInChildren<Renderer>().material = material[1];
+                // GetComponentInChildren<Renderer>().material = material[1];
             }
         }
     }

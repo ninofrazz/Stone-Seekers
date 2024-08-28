@@ -13,6 +13,8 @@ public class EventManager : MonoBehaviour
 
     private static EventManager instance;
 
+    string locName;
+
     private void Awake()
     {
         if (instance == null)
@@ -39,16 +41,20 @@ public class EventManager : MonoBehaviour
 
     public void ActivateEvent(int eventID)
     {
-        if (eventID == 1)
-        {
-            SceneManager.LoadScene("Loc1");
+        locName = eventID.ToString();
+        SceneManager.LoadScene("Loc" + locName);
+        /*
+                if (eventID == 1)
+                {
+                    SceneManager.LoadScene("Loc1");
 
-        }
-        else if (eventID == 2)
-        {
-            SceneManager.LoadScene("Loc2");
+                }
+                else if (eventID == 2)
+                {
+                    SceneManager.LoadScene("Loc2");
 
-        }
+                }
+        */
     }
     public static EventManager Instance
     {

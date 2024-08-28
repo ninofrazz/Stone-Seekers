@@ -31,9 +31,12 @@ public class MenuUIManager : MonoBehaviour
 
     public IndexManager IndexManager;
 
+
     void Start()
     {
         texts = IndexManager.dexTitle;
+        images = IndexManager.dexImages;
+
     }
 
     // Update is called once per frame
