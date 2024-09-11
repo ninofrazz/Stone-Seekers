@@ -26,6 +26,11 @@ public class Cam_Controls : MonoBehaviour
 
     public GameObject index;
 
+    private void Start()
+    {
+        transform.LookAt(PlayerObj);
+
+    }
     void Update()
     {
         if (!index.activeInHierarchy)

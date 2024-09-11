@@ -15,6 +15,7 @@ public class EventUIManager : MonoBehaviour
     public bool lastIsDropped;
 
     public DroppingSlot slot;
+    public GameObject CompletedText;
 
 
     void Start()
@@ -46,6 +47,7 @@ public class EventUIManager : MonoBehaviour
 
     public void OnDone()
     {
+        CompletedText.SetActive(true);
 
         // Get the build index of the current scene
         sceneNumber = currentScene.buildIndex;
