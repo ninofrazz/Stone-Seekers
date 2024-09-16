@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class AskPermission : MonoBehaviour
 {
+    public GameObject beCar;
+
     void Start()
     {
         RequestLocationPermission();
@@ -37,7 +39,9 @@ public class AskPermission : MonoBehaviour
     void StartLocationService()
     {
         // Start using location services here
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
+        // asyncManager.LoadLevel("map");
+        beCar.SetActive(true);
     }
 
     private void RequestLocationPermission()
