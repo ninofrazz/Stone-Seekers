@@ -14,6 +14,9 @@ public class IndexManager : MonoBehaviour
     public GameObject index;
     public GameObject indexButton;
     public GameObject Description;
+    public GameObject Credits;
+    public GameObject Tutorial;
+    public GameObject DialogeBox;
 
     [SerializeField]
     public Sprite[] dexImages;
@@ -31,7 +34,7 @@ public class IndexManager : MonoBehaviour
 
     public int receivedID;
 
-
+    private const string FirstTimeKey = "IsFirstTime";
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +43,33 @@ public class IndexManager : MonoBehaviour
         scrollbar.value = 1;
         scrollbar.size = 0.4f;
 
+
+        if (IsFirstBoot())
+        {
+            // This is the first time the game is launched
+            Debug.Log("Game is launched for the first time!");
+
+            // Perform first-time initialization tasks here
+            InitializeFirstTime();
+
+            // Mark as not the first boot anymore
+            PlayerPrefs.SetInt(FirstTimeKey, 1);
+            PlayerPrefs.Save(); // Save changes immediately
+        }
+        else
+        {
+            // The game has been launched before
+            Debug.Log("Welcome back!");
+        }
+    }
+    bool IsFirstBoot()
+    {
+        // Check if the key exists in PlayerPrefs, if not, it's the first boot
+        return PlayerPrefs.GetInt(FirstTimeKey, 0) == 0;
+    }
+    void InitializeFirstTime()
+    {
+        OpenTutorial();
     }
 
     public void ReceiveID(int id)
@@ -81,6 +111,24 @@ public class IndexManager : MonoBehaviour
     public void CloseDescription()
     {
         Description.SetActive(false);
+    }
+    public void OpenCredits()
+    {
+        Credits.SetActive(true);
+    }
+    public void CloseCredits()
+    {
+        Credits.SetActive(false);
+    }
+    public void OpenTutorial()
+    {
+        Tutorial.SetActive(true);
+        DialogeBox.SetActive(true);
+        DialogeBox.GetComponent<DialogueBox>().StartDialogue();
+    }
+    public void CloseTutorial()
+    {
+        Tutorial.SetActive(false);
     }
 }
 
