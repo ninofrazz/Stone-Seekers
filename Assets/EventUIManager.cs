@@ -17,14 +17,15 @@ public class EventUIManager : MonoBehaviour
     public DroppingSlot slot;
     public GameObject CompletedText;
 
+    public AudioManager audioManager;
 
+    bool callMehod;
     void Start()
     {
-
+        audioManager = GameObject.Find("-Audio Manager").GetComponent<AudioManager>();
         SceneisChecked = false;
         EM = GameObject.Find("-EventManager").GetComponent<EventManager>();
         currentScene = SceneManager.GetActiveScene();
-
 
     }
 
@@ -47,13 +48,27 @@ public class EventUIManager : MonoBehaviour
 
     public void OnDone()
     {
+        if (!callMehod)
+        {
+            PlaySounds();
+
+        }
+        callMehod = true;
+
         CompletedText.SetActive(true);
 
         // Get the build index of the current scene
         sceneNumber = currentScene.buildIndex;
 
         EM.eventsDone[sceneNumber - 2] = true;
+    }
 
+    public void PlaySounds()
+    {
+        audioManager.Play("Completed");
+        audioManager.Stop("Music");
+
+        Debug.Log("completed");
     }
 
 }

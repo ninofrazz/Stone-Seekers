@@ -26,6 +26,8 @@ public class EventPointer : MonoBehaviour
 
     public Material[] material;
 
+    public AudioManager audioManager;
+
 
 
     // Start is called before the first frame update
@@ -34,6 +36,7 @@ public class EventPointer : MonoBehaviour
         menuUIManager = GameObject.Find("Canvas").GetComponent<MenuUIManager>();
         eventManager = GameObject.Find("-EventManager").GetComponent<EventManager>();
         cam = Camera.main.GetComponent<Cam_Controls>();
+        audioManager = GameObject.Find("-Audio Manager").GetComponent<AudioManager>();
 
         GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>(true); // true to include inactive objects
         foreach (GameObject obj in allObjects)
@@ -78,12 +81,15 @@ public class EventPointer : MonoBehaviour
     {
         if (!cam.isDragging || !cam.isZooming && !index.activeInHierarchy)
         {
+            //audioManager.Play("SmallBeep");
+
             playerLocation = GameObject.Find("Canvas").GetComponent<LocationStatus>();
             var currentPlayerLocation = new GeoCoordinatePortable.GeoCoordinate(playerLocation.GetLocationLat(), playerLocation.GetLocationLon());
             var eventLocation = new GeoCoordinatePortable.GeoCoordinate(eventPos[0], eventPos[1]);
             var distance = currentPlayerLocation.GetDistanceTo(eventLocation);
 
             //Debug.Log("Distance is: " + distance);
+
 
             if (distance < eventManager.maxDistance)
             {

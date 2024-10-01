@@ -153,6 +153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistance: 200
   eventsDone: 0000000000
+  LoadingScreen: {fileID: 0}
+  map: {fileID: 0}
 --- !u!4 &76850935
 Transform:
   m_ObjectHideFlags: 0
@@ -472,6 +474,7 @@ MonoBehaviour:
   id: 1
   nextobj: {fileID: 1748286009}
   nextReceiver: {fileID: 1829371169}
+  audioManager: {fileID: 0}
 --- !u!114 &105895230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,6 +1418,7 @@ MonoBehaviour:
   lastIsDropped: 0
   slot: {fileID: 448787113}
   CompletedText: {fileID: 1987768344}
+  audioManager: {fileID: 0}
 --- !u!4 &323767510
 Transform:
   m_ObjectHideFlags: 0
@@ -1513,6 +1517,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UnBeep
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 323767509}
         m_TargetAssemblyTypeName: EventUIManager, Assembly-CSharp
         m_MethodName: OnMapButtonClick
@@ -1628,6 +1644,7 @@ MonoBehaviour:
   id: 5
   nextobj: {fileID: 0}
   nextReceiver: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &448787114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2195,6 +2212,7 @@ MonoBehaviour:
   id: 3
   nextobj: {fileID: 430281233}
   nextReceiver: {fileID: 1000822385}
+  audioManager: {fileID: 0}
 --- !u!114 &812991734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2559,6 +2577,7 @@ MonoBehaviour:
   id: 4
   nextobj: {fileID: 754538724}
   nextReceiver: {fileID: 448787111}
+  audioManager: {fileID: 0}
 --- !u!114 &1000822388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2673,6 +2692,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1077179460
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 467.19577
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 950.7556
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.5619428
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120104254953162436, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589364793379460900, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
+      propertyPath: m_Name
+      value: -Audio Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 772a131a521ab6e4f896094e0b32c9eb, type: 3}
 --- !u!1 &1210894312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,6 +3841,7 @@ MonoBehaviour:
   id: 2
   nextobj: {fileID: 2030008548}
   nextReceiver: {fileID: 812991731}
+  audioManager: {fileID: 0}
 --- !u!114 &1829371172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4461,3 +4538,4 @@ SceneRoots:
   - {fileID: 1642015600}
   - {fileID: 1234072475}
   - {fileID: 721601681}
+  - {fileID: 1077179460}

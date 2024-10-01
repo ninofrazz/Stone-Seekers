@@ -270,6 +270,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8030620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1087,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &100654023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,7 +1154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &102171958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2006,6 +2030,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &174688826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,7 +2464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5a505dddd53624297ba7c8ef8e6fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 300
+  maxDistance: 30
   eventsDone: 0000000000000000000000
   LoadingScreen: {fileID: 0}
   map: {fileID: 762553960}
@@ -3016,7 +3052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: -649.5}
+  m_AnchoredPosition: {x: 649.5, y: -99.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &337188568
@@ -3816,6 +3852,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &493013447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4025,6 +4073,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &547024174
@@ -4482,7 +4542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 649.5, y: -1749.5}
+  m_AnchoredPosition: {x: 1299.5, y: -1199.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &631928589
@@ -4558,7 +4618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1299.5, y: -99.5}
+  m_AnchoredPosition: {x: -0.5, y: -99.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &684956055
@@ -4693,6 +4753,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Beep
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &699978488
@@ -5537,6 +5609,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &876568363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5723,6 +5807,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   receiver: {fileID: 237535120}
+--- !u!1 &960687783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 960687785}
+  - component: {fileID: 960687786}
+  m_Layer: 0
+  m_Name: -Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &960687785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960687783}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 467.19577, y: 950.7556, z: 1.5619428}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &960687786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960687783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701d3b9363707b344b40f8aa7d9ff838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Beep
+    clip: {fileID: 8300000, guid: d86ccfe6e885d2c4e9c8627026610396, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UnBeep
+    clip: {fileID: 8300000, guid: 7d6f36a8af82c744a88da6d1dcb15b07, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SmallBeep
+    clip: {fileID: 8300000, guid: fb9ef4d26f4efd8488969c665f8b9b37, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &974095861
 GameObject:
   m_ObjectHideFlags: 0
@@ -6444,6 +6591,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1028662268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6785,7 +6944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 649.5, y: -1199.5}
+  m_AnchoredPosition: {x: 1299.5, y: -649.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &1188612615
@@ -7414,6 +7573,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UnBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1226797192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7501,7 +7672,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0.000015258789, y: -1874.3591}
-  m_SizeDelta: {x: 1813.3, y: 2350}
+  m_SizeDelta: {x: 1813.3, y: 1800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245300439
 MonoBehaviour:
@@ -7684,6 +7855,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1279729007
@@ -7893,7 +8076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: -1749.5}
+  m_AnchoredPosition: {x: 649.5, y: -1199.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &1285950758
@@ -8921,6 +9104,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1493000220
 GameObject:
   m_ObjectHideFlags: 0
@@ -9498,7 +9693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1560977223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9833,7 +10028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 649.5, y: -649.5}
+  m_AnchoredPosition: {x: 1299.5, y: -99.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &1602641252
@@ -10118,7 +10313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1299.5, y: -1199.5}
+  m_AnchoredPosition: {x: -0.5, y: -1199.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &1651544635
@@ -10194,7 +10389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: -1199.5}
+  m_AnchoredPosition: {x: 649.5, y: -649.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &1714960497
@@ -10818,7 +11013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 1577585663}
   _locationStrings:
-  - 50.72069603895961, -1.8769388649684413
+  - 50.72055791770105, -1.8769119321588916
   - 50.72171202592691, -1.8759453280505551
   - 51.427182,-1.8533276
   - ' 51.427435,-1.853156'
@@ -10940,6 +11135,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UnBeep
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1867590498
@@ -11156,6 +11363,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UnBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1892385531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11362,7 +11581,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1004253363}
   m_HandleRect: {fileID: 1004253362}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -11735,7 +11954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1299.5, y: -649.5}
+  m_AnchoredPosition: {x: -0.5, y: -649.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.005, y: 1.005}
 --- !u!114 &2001015948
@@ -11869,6 +12088,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UnBeep
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2033582893
@@ -12219,6 +12450,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2085365831
 GameObject:
   m_ObjectHideFlags: 0
@@ -12403,6 +12646,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 960687786}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SmallBeep
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2095244808
@@ -12593,3 +12848,4 @@ SceneRoots:
   - {fileID: 250077195}
   - {fileID: 237535121}
   - {fileID: 1566678280}
+  - {fileID: 960687785}

@@ -12,7 +12,7 @@ public class DroppingSlot : MonoBehaviour, IDropHandler
 
     public GameObject nextobj;
     public GameObject nextReceiver;
-
+    public AudioManager audioManager;
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
@@ -20,12 +20,17 @@ public class DroppingSlot : MonoBehaviour, IDropHandler
 
         if (transform.childCount == 0)
         {
+            audioManager.Play("Stone");
             draggableItem.parentAfterDrag = transform;
 
         }
 
     }
 
+    private void Start()
+    {
+        audioManager = GameObject.Find("-Audio Manager").GetComponent<AudioManager>();
+    }
 
     void Update()
     {
@@ -46,9 +51,9 @@ public class DroppingSlot : MonoBehaviour, IDropHandler
             {
                 nextobj.SetActive(true);
             }
-            if (nextReceiver != null) 
+            if (nextReceiver != null)
             {
-            nextReceiver.SetActive(true);
+                nextReceiver.SetActive(true);
             }
         }
 
