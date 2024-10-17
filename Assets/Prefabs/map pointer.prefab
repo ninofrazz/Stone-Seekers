@@ -129,4 +129,6 @@ MonoBehaviour:
   index: {fileID: 0}
   material:
   - {fileID: 2100000, guid: 53e2cd1e592a0fa4c807da8835cfedc1, type: 2}
+  - {fileID: 2100000, guid: 9991b64937c4f2a49b3a28b97f64ef7c, type: 2}
   - {fileID: 2100000, guid: 619f2bf47752f5e45b362e4e9e3c8094, type: 2}
+  audioManager: {fileID: 0}

@@ -57,11 +57,14 @@ public class EventUIManager : MonoBehaviour
 
         CompletedText.SetActive(true);
 
+        EM.SaveEventsDone();
+
         // Get the build index of the current scene
         sceneNumber = currentScene.buildIndex;
 
         EM.eventsDone[sceneNumber - 2] = true;
     }
+
 
     public void PlaySounds()
     {

@@ -33,6 +33,7 @@ public class EventManager : MonoBehaviour
     void Start()
     {
         LoadingScreen = GameObject.Find("Loading");
+        LoadEventsDone();
     }
 
     private IEnumerator wait()
@@ -43,7 +44,10 @@ public class EventManager : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-        LoadingScreen.SetActive(false);
+        if (LoadingScreen != null)
+        {
+            LoadingScreen.SetActive(false);
+        }
 
 
         // Wait until the end of the frame
@@ -97,4 +101,34 @@ public class EventManager : MonoBehaviour
     {
         get { return instance; }
     }
+
+    public void SaveEventsDone()
+    {
+        string boolString = string.Join(",", eventsDone); // Convert bool array to a comma-separated string
+        PlayerPrefs.SetString("EventsDone", boolString);  // Save the string in PlayerPrefs with key "EventsDone"
+        PlayerPrefs.Save();  // Ensure the data is saved
+        Debug.Log("Saving");
+    }
+
+    public void LoadEventsDone()
+    {
+        string boolString = PlayerPrefs.GetString("EventsDone", string.Empty); // Load the string from PlayerPrefs
+        Debug.Log("Loading");
+
+        if (!string.IsNullOrEmpty(boolString))
+        {
+            string[] boolStrings = boolString.Split(','); // Split the string into parts
+            eventsDone = new bool[boolStrings.Length]; // Initialize the bool array with the correct size
+
+            for (int i = 0; i < boolStrings.Length; i++)
+            {
+                eventsDone[i] = bool.Parse(boolStrings[i]); // Convert the string back to a bool
+            }
+        }
+        else
+        {
+            //eventsDone = new bool[0]; // Initialize with an empty array if no data is found
+        }
+    }
+
 }

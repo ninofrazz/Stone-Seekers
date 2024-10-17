@@ -60,15 +60,24 @@ public class EventPointer : MonoBehaviour
         var eventLocation = new GeoCoordinatePortable.GeoCoordinate(eventPos[0], eventPos[1]);
         var distance = currentPlayerLocation.GetDistanceTo(eventLocation);
 
-        if (distance < eventManager.maxDistance)
+        if (eventManager.eventsDone[eventID - 1])
         {
-            GetComponentInChildren<Renderer>().material = material[0];
-
+            // Set material to 1 if the event is true
+            GetComponentInChildren<Renderer>().material = material[1];
         }
         else
         {
-
-            GetComponentInChildren<Renderer>().material = material[1];
+            // If the event is false, check the distance
+            if (distance > eventManager.maxDistance)
+            {
+                // Set material to 2 if the event is false and out of distance
+                GetComponentInChildren<Renderer>().material = material[2];
+            }
+            else
+            {
+                // Set material to 0 if the event is false and within distance
+                GetComponentInChildren<Renderer>().material = material[0];
+            }
         }
     }
 

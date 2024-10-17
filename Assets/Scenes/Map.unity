@@ -2421,6 +2421,8 @@ MonoBehaviour:
   DescriptionImage: {fileID: 1590005442}
   scrollbar: {fileID: 1950438379}
   receivedID: 0
+  PlayerprefsFistBoot: 0
+  IsFirstBoot: 0
 --- !u!4 &237535121
 Transform:
   m_ObjectHideFlags: 0

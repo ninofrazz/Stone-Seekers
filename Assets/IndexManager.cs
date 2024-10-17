@@ -36,6 +36,11 @@ public class IndexManager : MonoBehaviour
 
     private const string FirstTimeKey = "IsFirstTime";
 
+    public int PlayerprefsFistBoot;
+
+    public bool IsFirstBoot;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,31 +48,31 @@ public class IndexManager : MonoBehaviour
         scrollbar.value = 1;
         scrollbar.size = 0.4f;
 
+        // PlayerPrefs.SetInt(FirstTimeKey, PlayerprefsFistBoot);
+        //PlayerPrefs.DeleteAll(); // This will clear all PlayerPrefs data for testing
+        //PlayerPrefs.Save(); // Ensure the changes are saved
 
-        if (IsFirstBoot())
+        // Checking if this is the first time the game is launched
+        if (PlayerPrefs.GetInt(FirstTimeKey) == 0)
         {
-            // This is the first time the game is launched
-            Debug.Log("Game is launched for the first time!");
-
-            // Perform first-time initialization tasks here
-            InitializeFirstTime();
-
-            // Mark as not the first boot anymore
-            PlayerPrefs.SetInt(FirstTimeKey, 1);
-            PlayerPrefs.Save(); // Save changes immediately
+            InitializeFirstTime(); // Run tutorial or first-time setup
+            PlayerPrefs.SetInt(FirstTimeKey, 1); // Mark first boot as done
+            //PlayerPrefs.Save(); // Save changes
         }
-        else
+        if (PlayerPrefs.GetInt(FirstTimeKey) == 1)
+
         {
-            // The game has been launched before
-            Debug.Log("Welcome back!");
         }
+        //method();
     }
-    bool IsFirstBoot()
+
+    public void method()
     {
-        // Check if the key exists in PlayerPrefs, if not, it's the first boot
-        return PlayerPrefs.GetInt(FirstTimeKey, 0) == 0;
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
-    void InitializeFirstTime()
+
+    public void InitializeFirstTime()
     {
         OpenTutorial();
     }
@@ -83,6 +88,7 @@ public class IndexManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].interactable = EM.eventsDone[i];
@@ -92,6 +98,8 @@ public class IndexManager : MonoBehaviour
         {
             DescriptionImage.preserveAspect = true;
         }
+
+        PlayerprefsFistBoot = PlayerPrefs.GetInt(FirstTimeKey, 0);
     }
 
     public void OpenIndex()
