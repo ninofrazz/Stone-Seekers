@@ -11,7 +11,9 @@ public class DialogueBox : MonoBehaviour
 
     public GameObject TutorialCanvas;
 
-    private int index;
+    public int index;
+
+    public GameObject[] tutImages;
 
     void Start()
     {
@@ -34,6 +36,48 @@ public class DialogueBox : MonoBehaviour
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
+        }
+        //manuel input of the diaòogue
+
+        if (index == 4)
+        {
+            tutImages[0].SetActive(true);
+        }
+        else
+        {
+            tutImages[0].SetActive(false);
+        }
+        if (index == 5)
+        {
+            tutImages[1].SetActive(true);
+        }
+        else
+        {
+            tutImages[1].SetActive(false);
+        }
+        if (index == 7)
+        {
+            tutImages[2].SetActive(true);
+        }
+        else
+        {
+            tutImages[2].SetActive(false);
+        }
+        if (index == 8)
+        {
+            tutImages[3].SetActive(true);
+        }
+        else
+        {
+            tutImages[3].SetActive(false);
+        }
+        if (index == 9)
+        {
+            tutImages[4].SetActive(true);
+        }
+        else
+        {
+            tutImages[4].SetActive(false);
         }
     }
 

@@ -34,7 +34,7 @@ public class IndexManager : MonoBehaviour
 
     public int receivedID;
 
-    private const string FirstTimeKey = "IsFirstTime";
+    private const string FirstTimeKey = "IsFirstTime1";
 
     public int PlayerprefsFistBoot;
 
@@ -63,7 +63,6 @@ public class IndexManager : MonoBehaviour
 
         {
         }
-        //method();
     }
 
     public void method()

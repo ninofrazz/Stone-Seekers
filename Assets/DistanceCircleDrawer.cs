@@ -11,6 +11,7 @@ public class DistanceCircleDrawer : MonoBehaviour
 
     void Start()
     {
+        eventManager = GameObject.Find("-EventManager").GetComponent<EventManager>();
         // Initialize the LineRenderer
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.startWidth = 1f;
@@ -19,6 +20,7 @@ public class DistanceCircleDrawer : MonoBehaviour
         lineRenderer.useWorldSpace = false;
         lineRenderer.loop = true; // To close the circle
         DrawCircle();
+
     }
 
     void Update()

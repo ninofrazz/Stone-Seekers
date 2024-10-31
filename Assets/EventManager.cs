@@ -56,12 +56,14 @@ public class EventManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (map.transform.childCount > 0)
+        if (map != null)
         {
+            if (map.transform.childCount > 0)
+            {
 
-            StartCoroutine(wait());
+                StartCoroutine(wait());
 
+            }
         }
     }
 
